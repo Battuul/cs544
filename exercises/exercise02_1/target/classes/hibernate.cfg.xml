@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="windows-1252" ?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
- "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
 	<session-factory>
-        <!-- MySQL DB running on localhost -->
-        <property name="connection.url">jdbc:mysql://localhost/cs544</property>
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.username"></property>
-        <property name="connection.password"></property>
-        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-
+		<!-- MySQL DB running on localhost -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/cs544</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.username">cs544</property>
+		<property name="connection.password">123456</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<!-- Use the Hibernate built-in pool for tests. -->
 		<property name="connection.pool_size">1</property>
 
@@ -23,5 +21,7 @@
 
 		<!-- Mapping files -->
 		<mapping class="edu.mum.cs.cs544.exercises.Car" />
+		<mapping class="edu.mum.cs.cs544.exercises.Book" />
+
 	</session-factory>
 </hibernate-configuration>
